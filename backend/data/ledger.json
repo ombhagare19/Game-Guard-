@@ -1,0 +1,361 @@
+{
+  "meta": {
+    "system": "GameGuard Demo Policy Ledger",
+    "specification": "MST Blockchain Buildathon Round 2",
+    "network": "Simulated Local Ledger / Ethereum Arbitrum Sepolia Ready",
+    "createdAt": "2026-10-30T08:05:36.644Z"
+  },
+  "receipts": [
+    {
+      "receiptId": "rec_466d3bc849a1",
+      "claimHash": "0x24f67ab02237fafdd40a2d4ec94bc203e22a701a7030eac50f88d6abb703db9b",
+      "canonicalString": "type:AGE_OVER_18|passed:true|policyVersion:1|salt:9577073829767a34408a4bfd37ba9e62",
+      "claimType": "AGE_OVER_18",
+      "passed": true,
+      "policyVersion": 1,
+      "timestamp": "2026-10-30T08:05:37.049Z",
+      "status": "verified",
+      "provider": "Demo Age Assurance Provider (Simulated Zero-Knowledge / Token Gateway)",
+      "source": "local demo / ready for EVM anchor",
+      "storedFields": [
+        "receiptId",
+        "claimHash",
+        "claimType",
+        "passed",
+        "policyVersion",
+        "timestamp",
+        "status"
+      ],
+      "neverStoredFields": [
+        "raw_date_of_birth",
+        "full_legal_name",
+        "government_id_scan",
+        "biometric_data"
+      ]
+    },
+    {
+      "receiptId": "rec_ce723463b46a",
+      "claimHash": "0x4ba8c7f5650c5115168aac0ce8975a87815d0c88c4653b8c07f049988db56753",
+      "canonicalString": "type:AGE_OVER_13|passed:true|policyVersion:1|salt:a93ebaf591d345517f41c2b17b6f49a0",
+      "claimType": "AGE_OVER_13",
+      "passed": true,
+      "policyVersion": 1,
+      "timestamp": "2026-10-30T08:05:36.916Z",
+      "status": "revoked",
+      "provider": "Demo Age Assurance Provider (Simulated Zero-Knowledge / Token Gateway)",
+      "source": "local demo / ready for EVM anchor",
+      "storedFields": [
+        "receiptId",
+        "claimHash",
+        "claimType",
+        "passed",
+        "policyVersion",
+        "timestamp",
+        "status"
+      ],
+      "neverStoredFields": [
+        "raw_date_of_birth",
+        "full_legal_name",
+        "government_id_scan",
+        "biometric_data"
+      ],
+      "revokedAt": "2026-10-30T08:05:36.947Z"
+    },
+    {
+      "receiptId": "rec_d15b725b578a",
+      "claimHash": "0x672f326ffb3e75a7399543cf15b450363ea1db45c3ef606b9508fba0ac7e6fc2",
+      "canonicalString": "type:AGE_OVER_13|passed:false|policyVersion:1|salt:b853216523bbb77600b376117da6ba6b",
+      "claimType": "AGE_OVER_13",
+      "passed": false,
+      "policyVersion": 1,
+      "timestamp": "2026-10-30T08:05:36.881Z",
+      "status": "rejected",
+      "provider": "Demo Age Assurance Provider (Simulated Zero-Knowledge / Token Gateway)",
+      "source": "local demo / ready for EVM anchor",
+      "storedFields": [
+        "receiptId",
+        "claimHash",
+        "claimType",
+        "passed",
+        "policyVersion",
+        "timestamp",
+        "status"
+      ],
+      "neverStoredFields": [
+        "raw_date_of_birth",
+        "full_legal_name",
+        "government_id_scan",
+        "biometric_data"
+      ]
+    }
+  ],
+  "securityEvents": [
+    {
+      "eventId": "evt_09695fad908f",
+      "timestamp": "2026-10-30T08:05:37.121Z",
+      "action": "LOGIN_SUCCESS",
+      "severity": "info",
+      "description": "Player authenticated successfully. Active session established.",
+      "sessionRef": "0x83a42e8efd3ff3ff13c76c7e38c438977d30adfb179ca03dd20d96769460542f",
+      "details": {},
+      "source": "GameGuard network policy simulator"
+    },
+    {
+      "eventId": "evt_5b6877d6123b",
+      "timestamp": "2026-10-30T08:05:37.050Z",
+      "action": "AGE_ASSURANCE_PASSED",
+      "severity": "info",
+      "description": "Age threshold confirmed. SHA-256 claim fingerprint derived: 0x24f67ab02237fafd... (No PII retained)",
+      "sessionRef": "0x6e6e6c6f981258e21fdfb884b4eec810f9ff58cc2c12a27de22f363a0e73fc01",
+      "details": {
+        "claimHash": "0x24f67ab02237fafdd40a2d4ec94bc203e22a701a7030eac50f88d6abb703db9b",
+        "status": "verified"
+      },
+      "source": "GameGuard network policy simulator"
+    },
+    {
+      "eventId": "evt_5d8221dd9f3a",
+      "timestamp": "2026-10-30T08:05:37.046Z",
+      "action": "GUARD_VERIFICATION",
+      "severity": "info",
+      "description": "GameGuard verification completed. Result: PASSED. Guard verification passed. Session meets gaming network baseline safety standards.",
+      "sessionRef": "0x6e6e6c6f981258e21fdfb884b4eec810f9ff58cc2c12a27de22f363a0e73fc01",
+      "details": {
+        "stagedSteps": [
+          {
+            "name": "Session Integrity",
+            "status": "passed",
+            "detail": "TLS 1.3 handshake verified; entropy score 0.98"
+          },
+          {
+            "name": "Account Policy",
+            "status": "passed",
+            "detail": "No credential stuffing or active ban detected"
+          },
+          {
+            "name": "Network Access Decision",
+            "status": "passed",
+            "detail": "Device fingerprint consistent with gaming safe profile"
+          }
+        ],
+        "decision": "passed"
+      },
+      "source": "GameGuard network policy simulator"
+    },
+    {
+      "eventId": "evt_b037c05297b4",
+      "timestamp": "2026-10-30T08:05:37.043Z",
+      "action": "ACCOUNT_REGISTERED",
+      "severity": "info",
+      "description": "New demo account created for player identifier: [REDACTED_SAFE_HASH_ret***]",
+      "sessionRef": "0x6e6e6c6f981258e21fdfb884b4eec810f9ff58cc2c12a27de22f363a0e73fc01",
+      "details": {},
+      "source": "GameGuard network policy simulator"
+    },
+    {
+      "eventId": "evt_04121f29d4fb",
+      "timestamp": "2026-10-30T08:05:36.965Z",
+      "action": "SESSION_REVOKED",
+      "severity": "warning",
+      "description": "Session manually revoked by user or security supervisor.",
+      "sessionRef": "0x970a5ad3372054adfe53e3e4c8a34b3d28a7292153609ebe95bf04f88062adf8",
+      "details": {},
+      "source": "GameGuard network policy simulator"
+    },
+    {
+      "eventId": "evt_595ebdcb40dd",
+      "timestamp": "2026-10-30T08:05:36.962Z",
+      "action": "CLAIM_MISMATCH_DETECTED",
+      "severity": "critical",
+      "description": "Cryptographic tamper alert! Provided hash does not match computed claim canonical string.",
+      "sessionRef": "0x970a5ad3372054adfe53e3e4c8a34b3d28a7292153609ebe95bf04f88062adf8",
+      "details": {},
+      "source": "GameGuard network policy simulator"
+    },
+    {
+      "eventId": "evt_5a7db36076e3",
+      "timestamp": "2026-10-30T08:05:36.951Z",
+      "action": "NETWORK_ACCESS_DENIED",
+      "severity": "warning",
+      "description": "Network access denied: Age assurance claim missing or revoked.",
+      "sessionRef": "0x970a5ad3372054adfe53e3e4c8a34b3d28a7292153609ebe95bf04f88062adf8",
+      "details": {},
+      "source": "GameGuard network policy simulator"
+    },
+    {
+      "eventId": "evt_027295b00276",
+      "timestamp": "2026-10-30T08:05:36.948Z",
+      "action": "PRESET_REVOKED_CLAIM",
+      "severity": "critical",
+      "description": "Claim revoked by player or administrative policy. Access denied.",
+      "sessionRef": "0x970a5ad3372054adfe53e3e4c8a34b3d28a7292153609ebe95bf04f88062adf8",
+      "details": {},
+      "source": "GameGuard network policy simulator"
+    },
+    {
+      "eventId": "evt_141f9b213197",
+      "timestamp": "2026-10-30T08:05:36.945Z",
+      "action": "NETWORK_ACCESS_ALLOWED",
+      "severity": "info",
+      "description": "Network access granted. Session authorized to connect to simulated game lobby.",
+      "sessionRef": "0x970a5ad3372054adfe53e3e4c8a34b3d28a7292153609ebe95bf04f88062adf8",
+      "details": {},
+      "source": "GameGuard network policy simulator"
+    },
+    {
+      "eventId": "evt_7a716bf47720",
+      "timestamp": "2026-10-30T08:05:36.942Z",
+      "action": "PRESET_NORMAL_SESSION",
+      "severity": "info",
+      "description": "Simulated preset triggered: Normal session verified. Risk profile remains LOW.",
+      "sessionRef": "0x970a5ad3372054adfe53e3e4c8a34b3d28a7292153609ebe95bf04f88062adf8",
+      "details": {},
+      "source": "GameGuard network policy simulator"
+    },
+    {
+      "eventId": "evt_97ae992a1e04",
+      "timestamp": "2026-10-30T08:05:36.936Z",
+      "action": "NETWORK_ACCESS_DENIED",
+      "severity": "critical",
+      "description": "Network access denied: Elevated risk anomalies detected on current session.",
+      "sessionRef": "0x970a5ad3372054adfe53e3e4c8a34b3d28a7292153609ebe95bf04f88062adf8",
+      "details": {},
+      "source": "GameGuard network policy simulator"
+    },
+    {
+      "eventId": "evt_256065382b88",
+      "timestamp": "2026-10-30T08:05:36.934Z",
+      "action": "PRESET_REPEATED_LOGIN_FAILURES",
+      "severity": "critical",
+      "description": "Suspicious event detected: 5 rapid failed logins. Session access locked in simulation.",
+      "sessionRef": "0x970a5ad3372054adfe53e3e4c8a34b3d28a7292153609ebe95bf04f88062adf8",
+      "details": {},
+      "source": "GameGuard network policy simulator"
+    },
+    {
+      "eventId": "evt_b1a51e9925b1",
+      "timestamp": "2026-10-30T08:05:36.928Z",
+      "action": "PRESET_REQUEST_BURST",
+      "severity": "warning",
+      "description": "Traffic anomaly: 140 req/sec burst observed. Rate-limiting simulation applied.",
+      "sessionRef": "0x970a5ad3372054adfe53e3e4c8a34b3d28a7292153609ebe95bf04f88062adf8",
+      "details": {},
+      "source": "GameGuard network policy simulator"
+    },
+    {
+      "eventId": "evt_f2b8d1144f27",
+      "timestamp": "2026-10-30T08:05:36.924Z",
+      "action": "NETWORK_ACCESS_ALLOWED",
+      "severity": "info",
+      "description": "Network access granted. Session authorized to connect to simulated game lobby.",
+      "sessionRef": "0x970a5ad3372054adfe53e3e4c8a34b3d28a7292153609ebe95bf04f88062adf8",
+      "details": {},
+      "source": "GameGuard network policy simulator"
+    },
+    {
+      "eventId": "evt_77474644d5b7",
+      "timestamp": "2026-10-30T08:05:36.917Z",
+      "action": "AGE_ASSURANCE_PASSED",
+      "severity": "info",
+      "description": "Age threshold confirmed. SHA-256 claim fingerprint derived: 0x4ba8c7f5650c5115... (No PII retained)",
+      "sessionRef": "0x970a5ad3372054adfe53e3e4c8a34b3d28a7292153609ebe95bf04f88062adf8",
+      "details": {
+        "claimHash": "0x4ba8c7f5650c5115168aac0ce8975a87815d0c88c4653b8c07f049988db56753",
+        "status": "verified"
+      },
+      "source": "GameGuard network policy simulator"
+    },
+    {
+      "eventId": "evt_614813d2665e",
+      "timestamp": "2026-10-30T08:05:36.912Z",
+      "action": "NETWORK_ACCESS_DENIED",
+      "severity": "warning",
+      "description": "Network access denied: Age assurance claim missing or revoked.",
+      "sessionRef": "0x970a5ad3372054adfe53e3e4c8a34b3d28a7292153609ebe95bf04f88062adf8",
+      "details": {},
+      "source": "GameGuard network policy simulator"
+    },
+    {
+      "eventId": "evt_7f07f9867b94",
+      "timestamp": "2026-10-30T08:05:36.908Z",
+      "action": "AGE_ASSURANCE_FAILED",
+      "severity": "warning",
+      "description": "Age threshold verification failed. Game lobby access denied per network safety policy.",
+      "sessionRef": "0x970a5ad3372054adfe53e3e4c8a34b3d28a7292153609ebe95bf04f88062adf8",
+      "details": {
+        "claimHash": "0x672f326ffb3e75a7399543cf15b450363ea1db45c3ef606b9508fba0ac7e6fc2",
+        "status": "rejected"
+      },
+      "source": "GameGuard network policy simulator"
+    },
+    {
+      "eventId": "evt_a899efa74eb1",
+      "timestamp": "2026-10-30T08:05:36.877Z",
+      "action": "NETWORK_ACCESS_DENIED",
+      "severity": "warning",
+      "description": "Network access denied: Age assurance claim missing or revoked.",
+      "sessionRef": "0x970a5ad3372054adfe53e3e4c8a34b3d28a7292153609ebe95bf04f88062adf8",
+      "details": {},
+      "source": "GameGuard network policy simulator"
+    },
+    {
+      "eventId": "evt_c9555fd162ba",
+      "timestamp": "2026-10-30T08:05:36.791Z",
+      "action": "GUARD_VERIFICATION",
+      "severity": "info",
+      "description": "GameGuard verification completed. Result: PASSED. Guard verification passed. Session meets gaming network baseline safety standards.",
+      "sessionRef": "0x970a5ad3372054adfe53e3e4c8a34b3d28a7292153609ebe95bf04f88062adf8",
+      "details": {
+        "stagedSteps": [
+          {
+            "name": "Session Integrity",
+            "status": "passed",
+            "detail": "TLS 1.3 handshake verified; entropy score 0.98"
+          },
+          {
+            "name": "Account Policy",
+            "status": "passed",
+            "detail": "No credential stuffing or active ban detected"
+          },
+          {
+            "name": "Network Access Decision",
+            "status": "passed",
+            "detail": "Device fingerprint consistent with gaming safe profile"
+          }
+        ],
+        "decision": "passed"
+      },
+      "source": "GameGuard network policy simulator"
+    },
+    {
+      "eventId": "evt_cf75466b1e31",
+      "timestamp": "2026-10-30T08:05:36.746Z",
+      "action": "NETWORK_ACCESS_DENIED",
+      "severity": "warning",
+      "description": "Network access denied: GameGuard security check has not been completed or passed.",
+      "sessionRef": "0x970a5ad3372054adfe53e3e4c8a34b3d28a7292153609ebe95bf04f88062adf8",
+      "details": {},
+      "source": "GameGuard network policy simulator"
+    },
+    {
+      "eventId": "evt_d983fc1644c1",
+      "timestamp": "2026-10-30T08:05:36.742Z",
+      "action": "ACCOUNT_REGISTERED",
+      "severity": "info",
+      "description": "New demo account created for player identifier: [REDACTED_SAFE_HASH_unv***]",
+      "sessionRef": "0x970a5ad3372054adfe53e3e4c8a34b3d28a7292153609ebe95bf04f88062adf8",
+      "details": {},
+      "source": "GameGuard network policy simulator"
+    },
+    {
+      "eventId": "evt_bdd5815ac840",
+      "timestamp": "2026-10-30T08:05:36.646Z",
+      "action": "DEMO_DATA_RESET",
+      "severity": "info",
+      "description": "Demo state successfully reset to initial baseline for judging.",
+      "sessionRef": null,
+      "details": {},
+      "source": "GameGuard network policy simulator"
+    }
+  ]
+}
